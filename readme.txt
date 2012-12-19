@@ -17,7 +17,7 @@ This plugins will gives stat for each post views by user. You will be able to se
 = Key Feature =
 
 * You can keep real-l-time track for each post views date wise
-* You can also see the post views stats in the all post view page with a “View count” column
+* You can also see the post views stats in the all post view page with a "View count" column
 * You will be able to use the widget to display the most popular post in the sidebar
 * Also if you are familiar with php code then you can use the template tag to place the most popular posts list, anywhere in the php template file
 

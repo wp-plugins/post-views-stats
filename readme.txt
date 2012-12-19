@@ -6,7 +6,7 @@ Requires at least: 2.9.2
 Tested up to: 3.5
 Stable tag: 1.0
 
-This plugins will track each post view/hit by user. You will be able to see the post view count in the all post page, also you can use the widget to display the most popular post (based on most views) in the sidebar ares.
+This plugins will count each post views by user.
 
 == Description ==
 

@@ -10,7 +10,7 @@ This plugins will count each post views by user.
 
 == Description ==
 
-<strong>If you need support to get this plugin installed or to have a customized version of the plugin please send us an email to this address <a href="mailto:contact@cybernetikz.com">contact@cybernetikz.com</a></strong>.
+<strong>If you need paid support to get this plugin installed or to have a customized version of the plugin please send us an email to this address <a href="mailto:contact@cybernetikz.com">contact@cybernetikz.com</a></strong>.
 
 If you want to keep real-time track of your post views / hit by user then you can use this plugins.
 

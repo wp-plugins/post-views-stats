@@ -1,9 +1,9 @@
 === Post views Stats ===
 Contributors: cybernetikz
 Donate link: 
-Tags: post views stats,post view,post view count,post view counts,view count,view counts,track post,track posts,track post views,post,count,stat,post stat,post counter
+Tags: post views stats,post view,post view count,post view counts,view count,view counts,track post,track posts,track post views,post,count,stat,post stat,post counter,popular,popular posts,posts,seo,widget,wordpress
 Requires at least: 2.9.2
-Tested up to: 3.5
+Tested up to: 3.5.2
 Stable tag: 1.0
 
 This plugins will count each post views by user.
@@ -18,9 +18,9 @@ This plugins will gives stat for each post views by user. You will be able to se
 
 = Key Feature =
 
+* You will be able to use the widget to display the most popular post in the sidebar
 * You can keep real-l-time track for each post views date wise
 * You can also see the post views stats in the all post view page with a "View count" column
-* You will be able to use the widget to display the most popular post in the sidebar
 * Also if you are familiar with php code then you can use the template tag to place the most popular posts list, anywhere in the php template file
 
 

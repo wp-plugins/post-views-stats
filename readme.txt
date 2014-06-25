@@ -3,18 +3,30 @@ Contributors: cybernetikz
 Donate link: 
 Tags: post views stats,post view,post view count,post view counts,view count,view counts,track post,track posts,track post views,post,count,stat,post stat,post counter,popular,popular posts,posts,seo,widget,wordpress
 Requires at least: 2.9.2
-Tested up to: 3.6
+Tested up to: 3.9.1
 Stable tag: 1.0
 
 This plugins will count each post views by user.
 
 == Description ==
 
-<strong>If you need paid support to get this plugin installed or to have a customized version of the plugin please send us an email to this address <a href="mailto:contact@cybernetikz.com">contact@cybernetikz.com</a></strong>.
-
 If you want to keep real-time track of your post views / hit by user then you can use this plugins.
 
 This plugins will gives stat for each post views by user. You will be able to see the post views count in the all post view page in WordPress admin panel, also you can use the widget to display the most popular post (based on most views) in the sidebar ares.
+
+> <strong>PAID SUPPORT ($30/Hr, We ACCEPT PAYPAL )</strong>
+>
+> We assume most of the users would find it easy to install & use this plugin but those who needs support on any of the following:
+>
+> <strong>a. Get the plugin installed </strong>
+>
+> <strong>b. Custom feature, custom theme </strong>
+>
+> <strong>c. Auditing your wordpress theme & hosting environment</strong>
+>
+> <strong>d. Google analytics & webmaster tools</strong>
+>
+> please send an email to this address <a href="mailto:support@cybernetikz.com">support@cybernetikz.com</a>
 
 = Key Feature =
 

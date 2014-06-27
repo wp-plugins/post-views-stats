@@ -24,7 +24,7 @@ This plugins will gives stat for each post views by user. You will be able to se
 >
 > <strong>c. Auditing your wordpress theme & hosting environment</strong>
 >
-> <strong>d. Google analytics & webmaster tools</strong>
+> <strong>d. Google analytics & webmaster tools support</strong>
 >
 > please send an email to this address <a href="mailto:support@cybernetikz.com">support@cybernetikz.com</a>
 

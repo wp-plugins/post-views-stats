@@ -33,7 +33,7 @@ This plugins will gives stat for each post views by visitor. You will be able to
 * You can keep Real-Time track for each post views date wise
 * You can also see the post views stats in the "Posts" &ndash;&gt; "All posts" page with a "View count" column
 * You will be able to use the widget to display the most popular post in the sidebar
-* Also if you are familiar with php code then you can use the php template tag `&lt;?php if( function_exists( 'cn_tpv_view_post_fn' ) ) { cn_tpv_view_post_fn(); } ?&gt;` to place the most popular posts list, anywhere in the php template file
+* Also if you are familiar with php code then you can use the php template tag `<?php if( function_exists( 'cn_tpv_view_post_fn' ) ) { cn_tpv_view_post_fn(); } ?>` to place the most popular posts list, anywhere in the php template file
 
 
 Please visit our site <a href="http://www.cybernetikz.com/wordpress-magento-plugins/wordpress-plugins/">www.cybernetikz.com/</a>

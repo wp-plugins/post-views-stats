@@ -18,17 +18,17 @@ function cn_tpv_admin_sidebar() {
 
 	$banners = array(
 		array(
-			'url' => 'http://www.cybernetikz.com/wordpress-magento-plugins/wordpress-plugins/?utm_source=post-views-stats&utm_medium=banner',
+			'url' => 'http://www.cybernetikz.com/wordpress-magento-plugins/wordpress-plugins/?utm_source=post-views-stats&utm_medium=banner&utm_campaign=wordpress-plugins',
 			'img' => 'banner-1.jpg',
 			'alt' => 'Banner 1',
 		),
 		array(
-			'url' => 'http://www.cybernetikz.com/portfolio/web-development/wordpress-website/?utm_source=post-views-stats&utm_medium=banner',
+			'url' => 'http://www.cybernetikz.com/portfolio/web-development/wordpress-website/?utm_source=post-views-stats&utm_medium=banner&utm_campaign=wordpress-plugins',
 			'img' => 'banner-2.jpg',
 			'alt' => 'Banner 2',
 		),
 		array(
-			'url' => 'http://www.cybernetikz.com/seo-consultancy/?utm_source=post-views-stats&utm_medium=banner',
+			'url' => 'http://www.cybernetikz.com/seo-consultancy/?utm_source=post-views-stats&utm_medium=banner&utm_campaign=wordpress-plugins',
 			'img' => 'banner-3.jpg',
 			'alt' => 'Banner 3',
 		),

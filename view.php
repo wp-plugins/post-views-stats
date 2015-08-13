@@ -1,4 +1,5 @@
 <?php 
+if( !defined('ABSPATH') ) die('-1');
 global $wpdb;
 $table_name = $wpdb->prefix . "cn_track_post";
 
@@ -10,13 +11,13 @@ if(isset($_POST['to']) and isset($_POST['from'])) {
 $tabledata = $wpdb->get_results($select);
 ?>
 <div class="wrap">
-<h2>Input date range</h2>
+<h2>Post views stats</h2>
+<div class="content_wrapper">
+<div class="left">
 <form action="" method="post">
-<p><label for="from">From</label>&nbsp;<input type="text" id="from" name="from" />&nbsp;<label for="to">to</label>&nbsp;<input type="text" id="to" name="to" />&nbsp;<input type="submit" class="button-primary" value="<?php _e('Submit') ?>" /></p>
+<p><strong>Date Range:</strong> <label for="from">From</label>&nbsp;<input type="text" id="from" name="from" />&nbsp;<label for="to"> To </label>&nbsp;<input type="text" id="to" name="to" />&nbsp;<input type="submit" class="button-primary" value="<?php _e('Submit') ?>" /></p>
 </form>
-</div>
-<div class="wrap">
-<h2>Post views stats <?php if(isset($_POST['to']) and isset($_POST['from'])) { echo ' | '. $_POST['from'].' - '. $_POST['to']; } ?></h2>
+<h3><?php if(isset($_POST['to']) and isset($_POST['from'])) { echo ' '. $_POST['from'].' - '. $_POST['to']; } ?></h3>
 <table class="widefat page fixed" cellspacing="0">
 	<thead>
 	<tr valign="top">
@@ -57,15 +58,19 @@ $tabledata = $wpdb->get_results($select);
 	<?php $i++; } ?>
 	</tbody>
 	<tfoot>
-	<tr valign="top">
-		<th class="manage-column column-title" scope="col" width="50">Serial</th>
-		<th class="manage-column column-title" scope="col" width="50">Post ID</th>
-		<th class="manage-column column-title" scope="col">Post Title</th>
-		<th class="manage-column column-title" scope="col" width="100">Author</th>
-		<th class="manage-column column-title" scope="col" width="70">Comment</th>
-		<th class="manage-column column-title" scope="col" width="50">Views</th>
-	</tr>
-	</tr>
+        <tr valign="top">
+            <th class="manage-column column-title" scope="col" width="50">Serial</th>
+            <th class="manage-column column-title" scope="col" width="50">Post ID</th>
+            <th class="manage-column column-title" scope="col">Post Title</th>
+            <th class="manage-column column-title" scope="col" width="100">Author</th>
+            <th class="manage-column column-title" scope="col" width="70">Comment</th>
+            <th class="manage-column column-title" scope="col" width="50">Views</th>
+        </tr>
 	</tfoot>
 </table>
 </div>
+<div class="right">
+<?php cn_tpv_admin_sidebar(); ?>
+</div>
+</div>
+</div><!--wrap-->

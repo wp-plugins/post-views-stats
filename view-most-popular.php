@@ -1,4 +1,5 @@
 <?php 
+if( !defined('ABSPATH') ) die('-1');
 global $wpdb;
 $table_name = $wpdb->prefix . "cn_track_post";
 if(isset($_POST['to']) and isset($_POST['from'])) {

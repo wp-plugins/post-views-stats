@@ -1,16 +1,58 @@
 <?php
 /*
 Plugin Name: Post Views Stats
-Plugin URI: http://www.cybernetikz.com
-Description: This plugins will track each post view/hit by user. You will be able to see the post view count in the all post page, also you can use the widget to display the most popular post in the sidebar ares.
-Version: 1.0
+Plugin URI: http://www.cybernetikz.com/
+Description: This plugins will track each post view/hit by visitor. You will be able to see the post view count in "Posts" &ndash;&gt; "All posts" page with a "View count" column, also you can use the widget to display the most popular post in the sidebar ares.
+Version: 1.1
 Author: cybernetikz
-Author URI: http://www.cybernetikz.com
+Author URI: http://www.cybernetikz.com/
 License: GPL2
 */
 
+if( !defined('ABSPATH') ) die('-1');
+
 $pluginURI = get_option('siteurl').'/wp-content/plugins/'.dirname(plugin_basename(__FILE__)); 
 add_action('wp_head', 'track_post_view');
+
+function cn_tpv_admin_sidebar() {
+
+	$banners = array(
+		array(
+			'url' => 'http://www.cybernetikz.com/wordpress-magento-plugins/wordpress-plugins/?utm_source=post-views-stats&utm_medium=banner',
+			'img' => 'banner-1.jpg',
+			'alt' => 'Banner 1',
+		),
+		array(
+			'url' => 'http://www.cybernetikz.com/portfolio/web-development/wordpress-website/?utm_source=post-views-stats&utm_medium=banner',
+			'img' => 'banner-2.jpg',
+			'alt' => 'Banner 2',
+		),
+		array(
+			'url' => 'http://www.cybernetikz.com/seo-consultancy/?utm_source=post-views-stats&utm_medium=banner',
+			'img' => 'banner-3.jpg',
+			'alt' => 'Banner 3',
+		),
+	);
+	shuffle( $banners );
+	?>
+	<div class="cn_admin_banner">
+	<?php
+	$i = 0;
+	foreach ( $banners as $banner ) {
+		echo '<a target="_blank" href="' . esc_url( $banner['url'] ) . '"><img width="261" height="190" src="' . plugins_url( 'images/' . $banner['img'], __FILE__ ) . '" alt="' . esc_attr( $banner['alt'] ) . '"/></a><br/><br/>';
+		$i ++;
+	}
+	?>
+	</div>
+<?php
+}
+
+function cn_tpv_admin_style() {
+	global $pluginURI;
+	wp_register_style( 'cn_tpv_admin_css', $pluginURI . '/css/admin-style.css', false, '1.0' );
+	wp_enqueue_style( 'cn_tpv_admin_css' );
+}
+add_action( 'admin_enqueue_scripts', 'cn_tpv_admin_style' );
 
 function cn_tpv_db_install () {
 	global $wpdb;
@@ -58,8 +100,12 @@ function track_post_view() {
 	global $post,$wpdb;
 	if(is_single())
 	{
-		$current_user = wp_get_current_user();
-		$user_role = $current_user->roles[0];
+		$user_role = '';
+		if ( is_user_logged_in() ) {
+			$current_user = wp_get_current_user();	
+			$user_role = $current_user->roles[0];
+		}
+		//if( is_object( $current_user ) ) {}
 		if ( $user_role != 'administrator' ) {
 			$table_name = $wpdb->prefix . "cn_track_post";
 			$insert = "INSERT INTO " . $table_name . "( post_id, created_at, create_date ) VALUES (" . $post->ID . ",'" . time() . "','" . date('Y-m-d')."')";
@@ -115,11 +161,11 @@ function cn_tpv_columns_head($defaults) {
 }
 
 function cn_tpv_get_view_count($post_ID) {  
-		global $wpdb;
-		$table_name = $wpdb->prefix . "cn_track_post";
-		$select="SELECT *,count(*) as counts FROM $table_name WHERE post_id=$post_ID group by post_id order by counts desc";
-		$tabledata = $wpdb->get_row($select);
-		return $tabledata->counts?$tabledata->counts:0;
+	global $wpdb;
+	$table_name = $wpdb->prefix . "cn_track_post";
+	$select="SELECT *,count(*) as counts FROM $table_name WHERE post_id=$post_ID group by post_id order by counts desc";
+	$tabledata = $wpdb->get_row($select);
+	return $tabledata->counts?$tabledata->counts:0;
 }
 
 function cn_tpv_columns_content($column_name, $post_ID) {  
